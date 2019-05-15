@@ -31,3 +31,56 @@ class Article {
 let articles = document.querySelectorAll('.article');
 
 articles.forEach(article => new Article(article));
+
+
+
+//FUNCTION THAT BUILDS ARTICLE COMPONENTS 
+const mainSection = document.querySelector('.article-container');
+
+
+class createNewArticle {
+  constructor(data) {
+    this.data = data;
+    const articles = createElement('div')
+    articles.classList.add('articles');
+    const article = createElement('div');
+    article.classList.add('article');
+    const h2 = createElement('h2');
+    h2.classList.add('h2');
+    h2.textContent = this.data.heading;
+    const dateParagraph = createElement('p');
+    dateParagraph.classList.add('date')
+    dateParagraph.textContent = this.data.date;
+    const paragraph1 = createElement('p');
+    paragraph1.textContent = this.data.paragraph1;
+    const paragraph2 = createElement('p');
+    paragraph2.textContent = this.data.paragraph2;
+
+    articles.appendChild(article);
+    article.append(h2, dateParagraph, paragraph1, paragraph2);
+  }
+}
+
+
+
+
+
+const articleData = [
+  {
+    heading: 'Sheep',
+    paragraph1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    paragraph2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+  {
+    heading: 'Lambs',
+    paragraph1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    paragraph2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+  {
+    heading: 'Wolves',
+    paragraph1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    paragraph2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+];
+
+
