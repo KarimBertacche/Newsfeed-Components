@@ -1,8 +1,15 @@
-
 const toggleMenu = () => {
   menu.classList.toggle('menu--open'); 
-  menuButton.classList.toggle('btn-slide');
+  menuButton.classList.replace('menu--open', 'btn-slide');
 }
+
+const windowToggle = (event) => {
+  if(event.target !== 'img.menu-button'){
+    menuButton.classList.replace('btn-slide', 'menu--open');
+  }
+}
+
+
 
 // Start Here: Create a reference to the ".menu" class
 const menu = document.querySelector('.menu');
@@ -10,9 +17,6 @@ const menu = document.querySelector('.menu');
 const menuButton = document.querySelector('.menu-button');
 // Using your menuButton reference, add a click handler that calls toggleMenu
 menuButton.addEventListener('click', toggleMenu);
+window.addEventListener('click', windowToggle);
 
-// document.addEventListener('click', (event) => {
-//    else if(event.screenY !== 116){
-//     menuButton.classList.toggle('btn-slide'); 
-//   } 
-// })
+

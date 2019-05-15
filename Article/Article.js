@@ -32,86 +32,80 @@ let articles = document.querySelectorAll('.article');
 
 articles.forEach(article => new Article(article));
 
-
-
 //FUNCTION THAT BUILDS ARTICLE COMPONENTS 
-// const articleSection = document.querySelector('.articles');
+const articleData = [
+  {
+    heading: 'Sheep',
+    paragraph1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ut ab vel asperiores inventore tempore odio laboriosam et rerum debitis laudantium voluptatem laborum maiores, accusamus doloribus eaque sit, odit magnam assumenda ea vitae obcaecati? Quisquam sapiente mollitia debitis repudiandae deserunt nobis dolores expedita iure placeat, quibusdam beatae fugit optio culpa, repellat vel! Dignissimos, voluptatibus. Eius, voluptate earum porro minus exercitationem sapiente assumenda, modi recusandae eos sunt tenetur quo ex iure quos! Incidunt ut dignissimos vero nesciunt repellendus commodi fugiat quo error temporibus tenetur nostrum, sit earum repellat sequi? Doloremque sint facere impedit perspiciatis voluptas similique quos eaque. Nam, excepturi labore?',
+    paragraph2: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ut ab vel asperiores inventore tempore odio laboriosam et rerum debitis laudantium voluptatem laborum maiores, accusamus doloribus eaque sit, odit magnam assumenda ea vitae obcaecati? Quisquam sapiente mollitia debitis repudiandae deserunt nobis dolores expedita iure placeat, quibusdam beatae fugit optio culpa, repellat vel! Dignissimos, voluptatibus. Eius, voluptate earum porro minus exercitationem sapiente assumenda, modi recusandae eos sunt tenetur quo ex iure quos! Incidunt ut dignissimos vero nesciunt repellendus commodi fugiat quo error temporibus tenetur nostrum, sit earum repellat sequi? Doloremque sint facere impedit perspiciatis voluptas similique quos eaque. Nam, excepturi labore?',
+  },
+  {
+    heading: 'Lambs',
+    paragraph1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ut ab vel asperiores inventore tempore odio laboriosam et rerum debitis laudantium voluptatem laborum maiores, accusamus doloribus eaque sit, odit magnam assumenda ea vitae obcaecati? Quisquam sapiente mollitia debitis repudiandae deserunt nobis dolores expedita iure placeat, quibusdam beatae fugit optio culpa, repellat vel! Dignissimos, voluptatibus. Eius, voluptate earum porro minus exercitationem sapiente assumenda, modi recusandae eos sunt tenetur quo ex iure quos! Incidunt ut dignissimos vero nesciunt repellendus commodi fugiat quo error temporibus tenetur nostrum, sit earum repellat sequi? Doloremque sint facere impedit perspiciatis voluptas similique quos eaque. Nam, excepturi labore?',
+    paragraph2: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ut ab vel asperiores inventore tempore odio laboriosam et rerum debitis laudantium voluptatem laborum maiores, accusamus doloribus eaque sit, odit magnam assumenda ea vitae obcaecati? Quisquam sapiente mollitia debitis repudiandae deserunt nobis dolores expedita iure placeat, quibusdam beatae fugit optio culpa, repellat vel! Dignissimos, voluptatibus. Eius, voluptate earum porro minus exercitationem sapiente assumenda, modi recusandae eos sunt tenetur quo ex iure quos! Incidunt ut dignissimos vero nesciunt repellendus commodi fugiat quo error temporibus tenetur nostrum, sit earum repellat sequi? Doloremque sint facere impedit perspiciatis voluptas similique quos eaque. Nam, excepturi labore?',
+  },
+  {
+    heading: 'Wolves',
+    paragraph1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ut ab vel asperiores inventore tempore odio laboriosam et rerum debitis laudantium voluptatem laborum maiores, accusamus doloribus eaque sit, odit magnam assumenda ea vitae obcaecati? Quisquam sapiente mollitia debitis repudiandae deserunt nobis dolores expedita iure placeat, quibusdam beatae fugit optio culpa, repellat vel! Dignissimos, voluptatibus. Eius, voluptate earum porro minus exercitationem sapiente assumenda, modi recusandae eos sunt tenetur quo ex iure quos! Incidunt ut dignissimos vero nesciunt repellendus commodi fugiat quo error temporibus tenetur nostrum, sit earum repellat sequi? Doloremque sint facere impedit perspiciatis voluptas similique quos eaque. Nam, excepturi labore?',
+    paragraph2: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ut ab vel asperiores inventore tempore odio laboriosam et rerum debitis laudantium voluptatem laborum maiores, accusamus doloribus eaque sit, odit magnam assumenda ea vitae obcaecati? Quisquam sapiente mollitia debitis repudiandae deserunt nobis dolores expedita iure placeat, quibusdam beatae fugit optio culpa, repellat vel! Dignissimos, voluptatibus. Eius, voluptate earum porro minus exercitationem sapiente assumenda, modi recusandae eos sunt tenetur quo ex iure quos! Incidunt ut dignissimos vero nesciunt repellendus commodi fugiat quo error temporibus tenetur nostrum, sit earum repellat sequi? Doloremque sint facere impedit perspiciatis voluptas similique quos eaque. Nam, excepturi labore?',
+  },
+  {
+    heading: 'Giraffe',
+    paragraph1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ut ab vel asperiores inventore tempore odio laboriosam et rerum debitis laudantium voluptatem laborum maiores, accusamus doloribus eaque sit, odit magnam assumenda ea vitae obcaecati? Quisquam sapiente mollitia debitis repudiandae deserunt nobis dolores expedita iure placeat, quibusdam beatae fugit optio culpa, repellat vel! Dignissimos, voluptatibus. Eius, voluptate earum porro minus exercitationem sapiente assumenda, modi recusandae eos sunt tenetur quo ex iure quos! Incidunt ut dignissimos vero nesciunt repellendus commodi fugiat quo error temporibus tenetur nostrum, sit earum repellat sequi? Doloremque sint facere impedit perspiciatis voluptas similique quos eaque. Nam, excepturi labore?',
+    paragraph2: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ut ab vel asperiores inventore tempore odio laboriosam et rerum debitis laudantium voluptatem laborum maiores, accusamus doloribus eaque sit, odit magnam assumenda ea vitae obcaecati? Quisquam sapiente mollitia debitis repudiandae deserunt nobis dolores expedita iure placeat, quibusdam beatae fugit optio culpa, repellat vel! Dignissimos, voluptatibus. Eius, voluptate earum porro minus exercitationem sapiente assumenda, modi recusandae eos sunt tenetur quo ex iure quos! Incidunt ut dignissimos vero nesciunt repellendus commodi fugiat quo error temporibus tenetur nostrum, sit earum repellat sequi? Doloremque sint facere impedit perspiciatis voluptas similique quos eaque. Nam, excepturi labore?',
+  },
+  {
+    heading: 'Lion',
+    paragraph1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ut ab vel asperiores inventore tempore odio laboriosam et rerum debitis laudantium voluptatem laborum maiores, accusamus doloribus eaque sit, odit magnam assumenda ea vitae obcaecati? Quisquam sapiente mollitia debitis repudiandae deserunt nobis dolores expedita iure placeat, quibusdam beatae fugit optio culpa, repellat vel! Dignissimos, voluptatibus. Eius, voluptate earum porro minus exercitationem sapiente assumenda, modi recusandae eos sunt tenetur quo ex iure quos! Incidunt ut dignissimos vero nesciunt repellendus commodi fugiat quo error temporibus tenetur nostrum, sit earum repellat sequi? Doloremque sint facere impedit perspiciatis voluptas similique quos eaque. Nam, excepturi labore?',
+    paragraph2: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ut ab vel asperiores inventore tempore odio laboriosam et rerum debitis laudantium voluptatem laborum maiores, accusamus doloribus eaque sit, odit magnam assumenda ea vitae obcaecati? Quisquam sapiente mollitia debitis repudiandae deserunt nobis dolores expedita iure placeat, quibusdam beatae fugit optio culpa, repellat vel! Dignissimos, voluptatibus. Eius, voluptate earum porro minus exercitationem sapiente assumenda, modi recusandae eos sunt tenetur quo ex iure quos! Incidunt ut dignissimos vero nesciunt repellendus commodi fugiat quo error temporibus tenetur nostrum, sit earum repellat sequi? Doloremque sint facere impedit perspiciatis voluptas similique quos eaque. Nam, excepturi labore?',
+  },
+  {
+    heading: 'Chimpanzee',
+    paragraph1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ut ab vel asperiores inventore tempore odio laboriosam et rerum debitis laudantium voluptatem laborum maiores, accusamus doloribus eaque sit, odit magnam assumenda ea vitae obcaecati? Quisquam sapiente mollitia debitis repudiandae deserunt nobis dolores expedita iure placeat, quibusdam beatae fugit optio culpa, repellat vel! Dignissimos, voluptatibus. Eius, voluptate earum porro minus exercitationem sapiente assumenda, modi recusandae eos sunt tenetur quo ex iure quos! Incidunt ut dignissimos vero nesciunt repellendus commodi fugiat quo error temporibus tenetur nostrum, sit earum repellat sequi? Doloremque sint facere impedit perspiciatis voluptas similique quos eaque. Nam, excepturi labore?',
+    paragraph2: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ut ab vel asperiores inventore tempore odio laboriosam et rerum debitis laudantium voluptatem laborum maiores, accusamus doloribus eaque sit, odit magnam assumenda ea vitae obcaecati? Quisquam sapiente mollitia debitis repudiandae deserunt nobis dolores expedita iure placeat, quibusdam beatae fugit optio culpa, repellat vel! Dignissimos, voluptatibus. Eius, voluptate earum porro minus exercitationem sapiente assumenda, modi recusandae eos sunt tenetur quo ex iure quos! Incidunt ut dignissimos vero nesciunt repellendus commodi fugiat quo error temporibus tenetur nostrum, sit earum repellat sequi? Doloremque sint facere impedit perspiciatis voluptas similique quos eaque. Nam, excepturi labore?',
+  },
+];
+
+class createNewArticle {
+  constructor(data, articleData) {
+    this.data = data;
+    this.articleData = articleData;
+    const article = document.createElement('div');
+    article.classList.add('article');
+    article.style.overflow = 'scroll';
+    const articles = document.querySelector('.articles');
+    articles.append(article);
+    this.createHeading(article);
+    this.createParagraphs(article);
+    this.createButton(article);
+  }
+
+  createHeading(article) {
+    const heading = document.createElement('h2'); 
+    heading.classList.add('h2');
+    heading.textContent = this.articleData.heading;
+    article.appendChild(heading);
+  }
+
+  createParagraphs(article){
+    const paragraph1 = document.createElement('p');
+    paragraph1.textContent = this.articleData.paragraph1;
+    article.append(paragraph1);
+    const paragraph2 = document.createElement('p');
+    paragraph2.textContent = this.articleData.paragraph2;
+    article.append(paragraph2);
+  }
+
+  createButton(article) {
+    const button = document.createElement('button');
+    button.classList.add('expandButton');
+    button.textContent = 'expand';
+    article.append(button); 
+    button.addEventListener('click', () => {
+      article.classList.toggle('article-open');
+    })
+  }
+}
 
 
-// class createNewArticle {
-//   constructor(data) {
-//     this.data = data;
-//     this.index = this.iterateDataContent(this.data);
-//     console.log(this.data);
-//     console.log(this.index);
-  
-//     this.createArticlesContainers();
-//     this.createHeadingSecondary();
-//     this.createDateParagraph();
-//     this.createArticleParagraphs();
-//     this.appendElements();
-//   }
-
-//   createArticlesContainers() {
-//     const articles = document.createElement('div');
-//     articles.classList.add('articles');
-//     const article = document.createElement('div');
-//     article.classList.add('article');
-//   }
-
-//   iterateDataContent(data) {
-//     Array.from(data);
-//     const dataIndex = data.map((data, index)=> index);
-//     console.log(dataIndex);
-//   }
-
-//   createHeadingSecondary() {
-//     const h2 = document.createElement('h2');
-//     h2.classList.add('h2');
-//     h2.textContent = this.data[this.index].heading;
-//   }
-
-//   // createDateParagraph() {
-//   //   const dateParagraph = createElement('p');
-//   //   dateParagraph.classList.add('date')
-//   //   dateParagraph.textContent = this.singleData.date;
-//   // }
-    
-//   createArticleParagraphs() {
-//     const paragraph1 = document.createElement('p');
-//     paragraph1.textContent = this.data[this.index].paragraph1;
-//     const paragraph2 = document.createElement('p');
-//     paragraph2.textContent = this.data[this.index].paragraph2;
-//     const paragraph3 = createElement('p');
-//     paragraph3.textContent = this.singleData.paragraph3;
-//   }
-   
-//   appendElements() {
-//     this.articles.appendChild(article);
-//     this.article.append(h2, dateParagraph, paragraph1, paragraph2);
-//   }
-// }
-
-
-
-// const articleData = [
-//   {
-//     heading: 'Sheep',
-//     paragraph1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-//     paragraph2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-//   },
-//   {
-//     heading: 'Lambs',
-//     paragraph1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-//     paragraph2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-//   },
-//   {
-//     heading: 'Wolves',
-//     paragraph1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-//     paragraph2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-//   },
-// ];
-
-
-// const newArticle = new createNewArticle(articleData);
-// console.log(newArticle);
+articleData.forEach((article, index) => new createNewArticle(articleData, articleData[index]));
