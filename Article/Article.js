@@ -35,52 +35,83 @@ articles.forEach(article => new Article(article));
 
 
 //FUNCTION THAT BUILDS ARTICLE COMPONENTS 
-const mainSection = document.querySelector('.article-container');
+// const articleSection = document.querySelector('.articles');
 
 
-class createNewArticle {
-  constructor(data) {
-    this.data = data;
-    const articles = createElement('div')
-    articles.classList.add('articles');
-    const article = createElement('div');
-    article.classList.add('article');
-    const h2 = createElement('h2');
-    h2.classList.add('h2');
-    h2.textContent = this.data.heading;
-    const dateParagraph = createElement('p');
-    dateParagraph.classList.add('date')
-    dateParagraph.textContent = this.data.date;
-    const paragraph1 = createElement('p');
-    paragraph1.textContent = this.data.paragraph1;
-    const paragraph2 = createElement('p');
-    paragraph2.textContent = this.data.paragraph2;
+// class createNewArticle {
+//   constructor(data) {
+//     this.data = data;
+//     this.index = this.iterateDataContent(this.data);
+//     console.log(this.data);
+//     console.log(this.index);
+  
+//     this.createArticlesContainers();
+//     this.createHeadingSecondary();
+//     this.createDateParagraph();
+//     this.createArticleParagraphs();
+//     this.appendElements();
+//   }
 
-    articles.appendChild(article);
-    article.append(h2, dateParagraph, paragraph1, paragraph2);
-  }
-}
+//   createArticlesContainers() {
+//     const articles = document.createElement('div');
+//     articles.classList.add('articles');
+//     const article = document.createElement('div');
+//     article.classList.add('article');
+//   }
+
+//   iterateDataContent(data) {
+//     Array.from(data);
+//     const dataIndex = data.map((data, index)=> index);
+//     console.log(dataIndex);
+//   }
+
+//   createHeadingSecondary() {
+//     const h2 = document.createElement('h2');
+//     h2.classList.add('h2');
+//     h2.textContent = this.data[this.index].heading;
+//   }
+
+//   // createDateParagraph() {
+//   //   const dateParagraph = createElement('p');
+//   //   dateParagraph.classList.add('date')
+//   //   dateParagraph.textContent = this.singleData.date;
+//   // }
+    
+//   createArticleParagraphs() {
+//     const paragraph1 = document.createElement('p');
+//     paragraph1.textContent = this.data[this.index].paragraph1;
+//     const paragraph2 = document.createElement('p');
+//     paragraph2.textContent = this.data[this.index].paragraph2;
+//     const paragraph3 = createElement('p');
+//     paragraph3.textContent = this.singleData.paragraph3;
+//   }
+   
+//   appendElements() {
+//     this.articles.appendChild(article);
+//     this.article.append(h2, dateParagraph, paragraph1, paragraph2);
+//   }
+// }
 
 
 
+// const articleData = [
+//   {
+//     heading: 'Sheep',
+//     paragraph1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+//     paragraph2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+//   },
+//   {
+//     heading: 'Lambs',
+//     paragraph1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+//     paragraph2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+//   },
+//   {
+//     heading: 'Wolves',
+//     paragraph1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+//     paragraph2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+//   },
+// ];
 
 
-const articleData = [
-  {
-    heading: 'Sheep',
-    paragraph1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    paragraph2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-  },
-  {
-    heading: 'Lambs',
-    paragraph1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    paragraph2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-  },
-  {
-    heading: 'Wolves',
-    paragraph1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    paragraph2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-  },
-];
-
-
+// const newArticle = new createNewArticle(articleData);
+// console.log(newArticle);
